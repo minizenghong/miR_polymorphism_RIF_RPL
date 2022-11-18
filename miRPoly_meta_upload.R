@@ -60,11 +60,11 @@ for (i in 1:length(Polymorphisms)) {
                              incr=1, test.subgroup=F, subset = polymorphism==Polymorphisms[i] & model==Genetic_models[j])
     df.subgroup.result <- data.frame(polymorphism=Polymorphisms[i], model=Genetic_models[j], ethnicity.1=meta_subgroup[["bylevs"]][1], n.1=meta_subgroup[["k.w"]][1], 
                             OR.random.1=exp(meta_subgroup[["TE.random.w"]][1]), lower.OR.random.1=exp(meta_subgroup[["lower.random.w"]][1]), upper.OR.random.1=exp(meta_subgroup[["upper.random.w"]][1]), p.random.1=meta_subgroup[["pval.random.w"]][1],
-                            OR.fixed.1=exp(meta_subgroup[["TE.fixed.w"]][1]), lower.OR.fixed.1=exp(meta_subgroup[["lower.fixed.w"]][1]), upper.OR.fixed.1=exp(meta_subgroup[["upper.fixed.w"]][1]), p.fixed.1=meta[["pval.fixed.w"]][1],
+                            OR.fixed.1=exp(meta_subgroup[["TE.fixed.w"]][1]), lower.OR.fixed.1=exp(meta_subgroup[["lower.fixed.w"]][1]), upper.OR.fixed.1=exp(meta_subgroup[["upper.fixed.w"]][1]), p.fixed.1=meta_subgroup[["pval.fixed.w"]][1],
                             I2.1=meta_subgroup[["I2.w"]][1], p.heterogeneity.1=meta_subgroup[["pval.Q.w"]][1],
                             ethnicity.2=meta_subgroup[["bylevs"]][2], n.2=meta_subgroup[["k.w"]][2], 
                             OR.random.2=exp(meta_subgroup[["TE.random.w"]][2]), lower.OR.random.2=exp(meta_subgroup[["lower.random.w"]][2]), upper.OR.random.2=exp(meta_subgroup[["upper.random.w"]][2]), p.random.2=meta_subgroup[["pval.random.w"]][2],
-                            OR.fixed.2=exp(meta_subgroup[["TE.fixed.w"]][2]), lower.OR.fixed.1=exp(meta_subgroup[["lower.fixed.w"]][2]), upper.OR.fixed.2=exp(meta_subgroup[["upper.fixed.w"]][2]), p.fixed.2=meta[["pval.fixed.w"]][2],
+                            OR.fixed.2=exp(meta_subgroup[["TE.fixed.w"]][2]), lower.OR.fixed.1=exp(meta_subgroup[["lower.fixed.w"]][2]), upper.OR.fixed.2=exp(meta_subgroup[["upper.fixed.w"]][2]), p.fixed.2=meta_subgroup[["pval.fixed.w"]][2],
                             I2.2=meta_subgroup[["I2.w"]][2], p.heterogeneity.2=meta_subgroup[["pval.Q.w"]][2])
     write.csv(df.subgroup.result, file = paste("Result.", Polymorphisms[i], Genetic_models[j],  ".csv", sep = ""), row.names=F)
     pdf(paste("Subgroup", Polymorphisms[i], Genetic_models[j], ".pdf", sep = ""), width = 12, height = 10, title = paste("Forest plot showing subgroup analysis of", Polymorphisms[i], "under", Genetic_models[j], sep = " "))
