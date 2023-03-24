@@ -10,7 +10,7 @@ Polymorphisms <- c("DICER A>G rs3742330", "DROSHA T>C rs10719", "RAN C>T rs14035
                    "miR-10a A>T rs3809783", "miR-124 C>G rs531564", "miR-125a C>T rs12976445", 
                    "miR-125a G>A rs41275794", "miR-146a C>G rs2910164", "miR-149 T>C rs2292832", 
                    "miR-196a2 C>T rs11614913", "miR-27a A>G rs895819", "miR-323b T>A rs56103835", 
-                   "miR-423 C>A rs6505162", "miR-499a A>G rs3746444")
+                   "miR-423 C>A rs6505162", "miR-449b A>G rs10061133", "miR-499a A>G rs3746444")
 Genetic_models <- c("Allele model", "Dominant model", "Recessive model", "Homozygotic model", "Heterozygotic model")
 df_miRPoly$polymorphism <- factor(df_miRPoly$polymorphism, levels = Polymorphisms)
 df_miRPoly$model <- factor(df_miRPoly$model, levels = Genetic_models)
